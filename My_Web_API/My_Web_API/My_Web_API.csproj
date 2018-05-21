@@ -5,15 +5,34 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="wwwroot\" />
+    <Folder Include="Infrustures\" />
+    <Folder Include="Model\" />
   </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.0" />
+    <PackageReference Include="Autofac.Configuration" Version="4.0.0" />
+    <PackageReference Include="Autofac.Extensions.DependencyInjection" Version="4.2.2" />
+    <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="5.2.2" />
+    <PackageReference Include="Autofac" Version="4.8.1" />
   </ItemGroup>
 
   <ItemGroup>
     <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="2.0.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Content Remove="autofac.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="autofac.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\My_Web_API_EF\My_Web_API_EF.csproj" />
+    <ProjectReference Include="..\My_Web_API_Service\My_Web_API_Service.csproj" />
+    <ProjectReference Include="..\My_Web_API_Service_Contract\My_Web_API_Service_Contract.csproj" />
+    <ProjectReference Include="..\My_Web_API_Repository\My_Web_API_Repository.csproj" />
+    <ProjectReference Include="..\My_Web_API_Repository_Contract\My_Web_API_Repository_Contract.csproj" />
+    <ProjectReference Include="..\My_Web_API_Entity\My_Web_API_Entity.csproj" />
+  </ItemGroup>
 </Project>

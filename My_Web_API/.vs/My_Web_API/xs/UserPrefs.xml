@@ -1,4 +1,48 @@
 ﻿<Properties StartupConfiguration="{A3FAF5A0-102B-4140-824F-C4F9DE899EFE}|Default">
-  <MonoDevelop.Ide.ItemProperties.My__Web__API FirstBuild="True" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="My_Web_API/Controllers/PageController.cs">
+    <Files>
+      <File FileName="My_Web_API/Controllers/PersonnelController.cs" Line="83" Column="1" />
+      <File FileName="My_Web_API/Startup.cs" Line="57" Column="1" />
+      <File FileName="My_Web_API/Infrustures/MyTokenValidate.cs" Line="25" Column="1" />
+      <File FileName="My_Web_API/Infrustures/CustomExceptionFilterAttribute.cs" Line="19" Column="1" />
+      <File FileName="My_Web_API_EF/DomainContext.cs" Line="13" Column="1" />
+      <File FileName="My_Web_API/autofac.json" Line="4" Column="37" />
+      <File FileName="My_Web_API/Program.cs" Line="17" Column="1" />
+      <File FileName="My_Web_API/Controllers/PageController.cs" Line="30" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="My_Web_API" expanded="True">
+            <Node name="My_Web_API" expanded="True">
+              <Node name="Dependencies" expanded="True">
+                <Node name="PackageDependencies" expanded="True" />
+              </Node>
+              <Node name="Controllers" expanded="True">
+                <Node name="PageController.cs" selected="True" />
+              </Node>
+              <Node name="Infrustures" expanded="True" />
+              <Node name="Model" expanded="True" />
+            </Node>
+            <Node name="My_Web_API_EF" expanded="True" />
+            <Node name="My_Web_API_Entity" expanded="True" />
+            <Node name="My_Web_API_Repository" expanded="True" />
+            <Node name="My_Web_API_Service" expanded="True">
+              <Node name="Dependencies" expanded="True" />
+            </Node>
+            <Node name="My_Web_API_Service_Contract" expanded="True">
+              <Node name="Dependencies" expanded="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.My__Web__API PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MultiItemStartupConfigurations />
 </Properties>

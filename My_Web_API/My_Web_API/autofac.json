@@ -1,0 +1,10 @@
+﻿{
+  "modules": [
+    {
+      "type": "My_Web_API_Repository.RepositoryModule, My_Web_API_Repository"
+    },
+    {
+      "type": "My_Web_API_Service.ServiceModule, My_Web_API_Service"
+    }
+  ]
+}

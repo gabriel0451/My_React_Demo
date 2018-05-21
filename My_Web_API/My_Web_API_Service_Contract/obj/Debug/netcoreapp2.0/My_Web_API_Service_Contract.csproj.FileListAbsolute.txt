@@ -1,0 +1,11 @@
+/Users/wangjin/Projects/My_Web_API/My_Web_API/My_Web_API_Service_Contract/bin/Debug/netcoreapp2.0/My_Web_API_Service_Contract.deps.json
+/Users/wangjin/Projects/My_Web_API/My_Web_API/My_Web_API_Service_Contract/bin/Debug/netcoreapp2.0/My_Web_API_Service_Contract.dll
+/Users/wangjin/Projects/My_Web_API/My_Web_API/My_Web_API_Service_Contract/bin/Debug/netcoreapp2.0/My_Web_API_Service_Contract.pdb
+/Users/wangjin/Projects/My_Web_API/My_Web_API/My_Web_API_Service_Contract/bin/Debug/netcoreapp2.0/My_Web_API_Entity.dll
+/Users/wangjin/Projects/My_Web_API/My_Web_API/My_Web_API_Service_Contract/bin/Debug/netcoreapp2.0/My_Web_API_Entity.pdb
+/Users/wangjin/Projects/My_Web_API/My_Web_API/My_Web_API_Service_Contract/obj/Debug/netcoreapp2.0/My_Web_API_Service_Contract.csprojResolveAssemblyReference.cache
+/Users/wangjin/Projects/My_Web_API/My_Web_API/My_Web_API_Service_Contract/obj/Debug/netcoreapp2.0/My_Web_API_Service_Contract.csproj.CoreCompileInputs.cache
+/Users/wangjin/Projects/My_Web_API/My_Web_API/My_Web_API_Service_Contract/obj/Debug/netcoreapp2.0/My_Web_API_Service_Contract.AssemblyInfoInputs.cache
+/Users/wangjin/Projects/My_Web_API/My_Web_API/My_Web_API_Service_Contract/obj/Debug/netcoreapp2.0/My_Web_API_Service_Contract.AssemblyInfo.cs
+/Users/wangjin/Projects/My_Web_API/My_Web_API/My_Web_API_Service_Contract/obj/Debug/netcoreapp2.0/My_Web_API_Service_Contract.dll
+/Users/wangjin/Projects/My_Web_API/My_Web_API/My_Web_API_Service_Contract/obj/Debug/netcoreapp2.0/My_Web_API_Service_Contract.pdb
