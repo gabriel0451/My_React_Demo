@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace My_Web_API_Entity
 {
 	[Table("Page")]
-	public class Personnel : BaseEntity<int>
+	public class Personnel : AggregateRoot
 	{
 		public string LoginId {
 			get;
@@ -32,6 +32,11 @@ namespace My_Web_API_Entity
 		}
 
 		public string Photo {
+			get;
+			set;
+		}
+
+		public DateTime? CreateTime{
 			get;
 			set;
 		}

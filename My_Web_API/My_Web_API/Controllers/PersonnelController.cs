@@ -10,7 +10,8 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
 using My_Web_API.Model;
-using My_Web_API_Repository_Contract;
+using My_Web_API_Entity;
+using My_Web_API_Entity.QueryEntity;
 using My_Web_API_Service_Contract;
 
 namespace My_Web_API.Controllers
@@ -18,17 +19,17 @@ namespace My_Web_API.Controllers
 	[Route("[controller]")]
 	public class PersonnelController : Controller
 	{
-		
+
 		private readonly IPersonnelService _personnelService;
 		private readonly JwtSetting _setting;
 
-		public PersonnelController(IPersonnelService serviceRepository,IOptions<JwtSetting> options)
+		public PersonnelController(IPersonnelService personnelService, IOptions<JwtSetting> options)
 		{
-			_personnelService = serviceRepository;
+			_personnelService = personnelService;
 			_setting = options.Value;
 		}
 		// GET api/values
-		[HttpPost("GetPersonnelBy")]
+		[HttpPost("GetPersonnelByUser")]
 		public IActionResult GetPersonnelBy([FromBody]UserViewModel user)
 		{
 			if (string.IsNullOrEmpty(user.LoginId) || string.IsNullOrEmpty(user.Password)) {
@@ -46,7 +47,7 @@ namespace My_Web_API.Controllers
 			}
 			var claims = new Claim[] {
 					new Claim(ClaimTypes.Name, user.LoginId),
-					new Claim(ClaimTypes.Role, "admin, Manage")
+					new Claim(ClaimTypes.Role, "Manage")
 				};
 			var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_setting.SecretKey));
 			var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
@@ -55,7 +56,7 @@ namespace My_Web_API.Controllers
 				_setting.Audience,
 				claims,
 				DateTime.Now,
-				DateTime.Now.AddMinutes(30),
+				DateTime.Now.AddMinutes(1),
 				creds);
 			return Ok(new {
 				success = true,
@@ -69,21 +70,87 @@ namespace My_Web_API.Controllers
 			});
 		}
 
-		[Authorize(Roles = "admin")]
-		[HttpPost("GetPersonnelByToken")]
-		public IActionResult GetPersonnelByToken()
+		[Authorize(Roles ="Manage")]
+		[HttpGet("GetPersonnels")]
+		public IActionResult GetPersonnels()
 		{
-			var claim = HttpContext.User.Identities.SelectMany(p => p.Claims).Where(o => o.Type == ClaimTypes.Name).FirstOrDefault();
-			if (claim == null)
-				return Ok(new {	
-					success = false,
-					message = "您无权访问！"
-				});
-			var personnel = _personnelService.GetPersonnelByLoginId(claim.Value);
+			//var claim = HttpContext.User.Identities.SelectMany(p => p.Claims).Where(o => o.Type == ClaimTypes.Name).FirstOrDefault();
+			var personnels = _personnelService.GetPersonnels();
 			return Ok(new {
 				success = true,
-				user = personnel.Result
+				data= new{
+					count=personnels.Result.Count(),
+					items=personnels.Result
+				} 
 			});
 		}
+
+		[Authorize(Roles = "Manage")]
+		[HttpPost("GetPersonnelByConditions")]
+		public async Task<PaginatedList<Personnel>> GetPersonnelsByConditions([FromBody]PersonnelQuery conditions){
+			var pagedList = await _personnelService.GetPersonnelsBy(conditions);
+			return pagedList;
+		}
+
+		[Authorize(Roles = "Manage")]
+		[HttpPost("InsertPersonnel")]
+		public IActionResult InsertPersonnel([FromBody]Personnel personnel)
+		{
+			try {
+				_personnelService.InsertPersonnel(personnel);
+
+				return Ok(new {
+					success = true,
+					message = "保存成功！"
+				});
+			} catch (Exception ex) {
+				return Ok(new {
+					success = false,
+					message = ex.Message
+				});
+  			}
+		}
+
+		[Authorize(Roles = "Manage")]
+		[HttpPut("AbandonPersonnel")]
+		public IActionResult AbandonPersonnel([FromBody]int[] ids){
+			{
+				try {
+					_personnelService.AbandonPersonnel(ids);
+					return Ok(new {
+						success = true,
+						message = "作废成功！"
+					});
+				} catch (Exception ex) {
+					return Ok(new {
+						success = false,
+						message = ex.Message
+					});
+				}
+			}
+		}
+
+		[Authorize(Roles = "Manage")]
+		[HttpPut("UpdatePersonnel")]
+		public IActionResult UpdatePersonnel([FromBody]Personnel personnel)
+		{
+			{
+				try {
+
+					_personnelService.UpdatePersonnel(personnel);
+					return Ok(new {
+						success = true,
+						message = "保存成功！"
+					});
+				} catch (Exception ex) {
+					return Ok(new {
+						success = false,
+						message = ex.Message
+					});
+				}
+			}
+		}
+
+
 	}
 }

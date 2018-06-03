@@ -5,7 +5,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace My_Web_API_Entity
 {
 	[Table("Page")]
-	public class Page : BaseEntity<int>
+	public class Page : AggregateRoot
 	{
 		public int ParentId {
 			get;
@@ -40,6 +40,11 @@ namespace My_Web_API_Entity
 		}
 
 		public string Url{
+			get;
+			set;
+		}
+
+		public string Icon{
 			get;
 			set;
 		}

@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Autofac;
@@ -12,7 +11,6 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
-using Microsoft.Extensions.Options;
 using My_Web_API.Infrustures;
 using My_Web_API.Model;
 using My_Web_API_EF;
@@ -41,11 +39,7 @@ namespace My_Web_API
 			                                     options.UseSqlServer(Configuration.GetConnectionString("DomainConnection")));
 			services.AddScoped<DbContext>(provider => provider.GetService<DomainContext>());
 
-			services.AddCors();
-
 			services.Configure<JwtSetting>(Configuration.GetSection("JwtSetting"));
-			JwtSetting setting = new JwtSetting();
-			Configuration.Bind("JwtSetting", setting);
 			services.AddAuthentication(option => {
 				option.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
 				option.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;

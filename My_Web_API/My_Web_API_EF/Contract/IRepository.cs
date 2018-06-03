@@ -1,18 +1,20 @@
 ﻿using System;
 using System.Linq;
 using System.Linq.Expressions;
+using My_Web_API_Entity;
 
 namespace My_Web_API_EF.Contract
 {
+	/// <summary>
+	/// Repository标记接口
+	/// </summary>
 	public interface IRepository
 	{
 	}
 
-	/// <summary>
-	/// Repository标记接口
-	/// </summary>
-	public interface IRepository<TEntity> : IRepository
-		where TEntity : class
+
+	public interface IRepository<TEntity> : IRepository 
+		where TEntity : AggregateRoot 
 	{
 		IQueryable<TEntity> Get(
 			Expression<Func<TEntity, bool>> filter = null,

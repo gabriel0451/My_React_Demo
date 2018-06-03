@@ -23,6 +23,8 @@
 
   <ItemGroup>
     <Content Remove="autofac.json" />
+    <Content Remove="RuntimeModelConfig.json" />
+    <Content Remove="Enums.json" />
   </ItemGroup>
   <ItemGroup>
     <None Include="autofac.json" />
@@ -30,9 +32,6 @@
   <ItemGroup>
     <ProjectReference Include="..\My_Web_API_EF\My_Web_API_EF.csproj" />
     <ProjectReference Include="..\My_Web_API_Service\My_Web_API_Service.csproj" />
-    <ProjectReference Include="..\My_Web_API_Service_Contract\My_Web_API_Service_Contract.csproj" />
     <ProjectReference Include="..\My_Web_API_Repository\My_Web_API_Repository.csproj" />
-    <ProjectReference Include="..\My_Web_API_Repository_Contract\My_Web_API_Repository_Contract.csproj" />
-    <ProjectReference Include="..\My_Web_API_Entity\My_Web_API_Entity.csproj" />
   </ItemGroup>
 </Project>

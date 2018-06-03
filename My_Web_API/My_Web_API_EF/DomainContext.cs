@@ -1,5 +1,6 @@
 ﻿using System;
 using Microsoft.EntityFrameworkCore;
+using My_Web_API_EF.Infrustures;
 using My_Web_API_Entity;
 
 namespace My_Web_API_EF
@@ -9,13 +10,13 @@ namespace My_Web_API_EF
 		public DomainContext(DbContextOptions<DomainContext> options)
 			: base(options)
 		{
-
 		}
 
 		protected override void OnModelCreating(ModelBuilder modelBuilder)
 		{
 			modelBuilder.Entity<Page>().ToTable("Page");
 			modelBuilder.Entity<Personnel>().ToTable("Personnel");
+			modelBuilder.Entity<Role>().ToTable("Role");
 		}
 	}
 }

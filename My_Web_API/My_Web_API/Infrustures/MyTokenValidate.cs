@@ -33,7 +33,7 @@ namespace My_Web_API.Infrustures
 				var audience = token.Audiences;
 				var identity = new ClaimsIdentity(JwtBearerDefaults.AuthenticationScheme);
 				identity.AddClaim(new Claim(ClaimTypes.Name, name.ToString()));
-				identity.AddClaim(new Claim(ClaimsIdentity.DefaultRoleClaimType, "admin"));
+				identity.AddClaim(new Claim(ClaimsIdentity.DefaultRoleClaimType, role.ToString()));
 				principal = new ClaimsPrincipal(identity);
 			} catch {
 				validatedToken = null;                  

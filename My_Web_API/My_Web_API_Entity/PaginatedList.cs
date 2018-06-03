@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace My_Web_API_Entity
 {
-	public class PaginatedList<T>
+	public class PaginatedList<T>: IEntity
 	{
 		public int PageIndex { get; private set; }
 		public int PageSize { get; private set; }

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using My_Web_API_Entity;
+using My_Web_API_Entity.QueryEntity;
 
 namespace My_Web_API_Service_Contract
 {
@@ -10,6 +11,14 @@ namespace My_Web_API_Service_Contract
 	{
 		Task<List<Personnel>> GetPersonnelsBy(string loginId, string password);
 
-		Task<Personnel> GetPersonnelByLoginId(string loginId);
+		Task<List<Personnel>> GetPersonnels();
+
+		Task<PaginatedList<Personnel>> GetPersonnelsBy(PersonnelQuery personnelQuery);
+
+		void InsertPersonnel(Personnel personnel);
+
+		void UpdatePersonnel(Personnel personnel);
+
+		void AbandonPersonnel(int[] ids);
 	}
 }

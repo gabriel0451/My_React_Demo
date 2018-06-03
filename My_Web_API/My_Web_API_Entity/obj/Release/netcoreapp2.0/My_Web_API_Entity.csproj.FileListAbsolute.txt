@@ -1,0 +1,8 @@
+/Users/wangjin/Projects/My_Web_API/My_Web_API/My_Web_API_Entity/bin/Release/netcoreapp2.0/My_Web_API_Entity.deps.json
+/Users/wangjin/Projects/My_Web_API/My_Web_API/My_Web_API_Entity/bin/Release/netcoreapp2.0/My_Web_API_Entity.dll
+/Users/wangjin/Projects/My_Web_API/My_Web_API/My_Web_API_Entity/bin/Release/netcoreapp2.0/My_Web_API_Entity.pdb
+/Users/wangjin/Projects/My_Web_API/My_Web_API/My_Web_API_Entity/obj/Release/netcoreapp2.0/My_Web_API_Entity.csproj.CoreCompileInputs.cache
+/Users/wangjin/Projects/My_Web_API/My_Web_API/My_Web_API_Entity/obj/Release/netcoreapp2.0/My_Web_API_Entity.AssemblyInfoInputs.cache
+/Users/wangjin/Projects/My_Web_API/My_Web_API/My_Web_API_Entity/obj/Release/netcoreapp2.0/My_Web_API_Entity.AssemblyInfo.cs
+/Users/wangjin/Projects/My_Web_API/My_Web_API/My_Web_API_Entity/obj/Release/netcoreapp2.0/My_Web_API_Entity.dll
+/Users/wangjin/Projects/My_Web_API/My_Web_API/My_Web_API_Entity/obj/Release/netcoreapp2.0/My_Web_API_Entity.pdb

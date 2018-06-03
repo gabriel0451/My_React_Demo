@@ -3,11 +3,12 @@ using System.Linq;
 using System.Linq.Expressions;
 using Microsoft.EntityFrameworkCore;
 using My_Web_API_EF.Contract;
+using My_Web_API_Entity;
 
 namespace My_Web_API_EF
 {
-	public abstract class Repository<TEntity> : IRepository<TEntity>
-		where TEntity : class
+	public abstract class Repository<TEntity> : IRepository<TEntity>  
+		where TEntity : AggregateRoot
 	{
 		protected DbContext Context;
 		protected DbSet<TEntity> DbSet;

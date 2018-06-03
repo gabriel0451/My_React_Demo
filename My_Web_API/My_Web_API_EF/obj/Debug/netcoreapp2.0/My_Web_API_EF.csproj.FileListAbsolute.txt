@@ -2,7 +2,9 @@
 /Users/wangjin/Projects/My_Web_API/My_Web_API/My_Web_API_EF/bin/Debug/netcoreapp2.0/My_Web_API_EF.dll
 /Users/wangjin/Projects/My_Web_API/My_Web_API/My_Web_API_EF/bin/Debug/netcoreapp2.0/My_Web_API_EF.pdb
 /Users/wangjin/Projects/My_Web_API/My_Web_API/My_Web_API_EF/bin/Debug/netcoreapp2.0/My_Web_API_Entity.dll
+/Users/wangjin/Projects/My_Web_API/My_Web_API/My_Web_API_EF/bin/Debug/netcoreapp2.0/Newtonsoft.Json.dll
 /Users/wangjin/Projects/My_Web_API/My_Web_API/My_Web_API_EF/bin/Debug/netcoreapp2.0/My_Web_API_Entity.pdb
+/Users/wangjin/Projects/My_Web_API/My_Web_API/My_Web_API_EF/bin/Debug/netcoreapp2.0/Newtonsoft.Json.xml
 /Users/wangjin/Projects/My_Web_API/My_Web_API/My_Web_API_EF/obj/Debug/netcoreapp2.0/My_Web_API_EF.csprojResolveAssemblyReference.cache
 /Users/wangjin/Projects/My_Web_API/My_Web_API/My_Web_API_EF/obj/Debug/netcoreapp2.0/My_Web_API_EF.csproj.CoreCompileInputs.cache
 /Users/wangjin/Projects/My_Web_API/My_Web_API/My_Web_API_EF/obj/Debug/netcoreapp2.0/My_Web_API_EF.AssemblyInfoInputs.cache

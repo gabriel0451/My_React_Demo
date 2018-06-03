@@ -7,12 +7,22 @@
   <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="2.0.0" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="2.0.0" />
+    <PackageReference Include="System.ServiceModel.Primitives" Version="4.4.2" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Contract\" />
     <Folder Include="Contract\" />
+    <Folder Include="Infrustures\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\My_Web_API_Entity\My_Web_API_Entity.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\..\..\..\..\..\usr\local\share\dotnet\sdk\NuGetFallbackFolder\newtonsoft.json\10.0.1\lib\netstandard1.3\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="Infrustures\DynamicQueryable.cs" />
   </ItemGroup>
 </Project>

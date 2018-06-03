@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v2.0",
-    "signature": "ac9c8c5a3eb9f7942e482fe0246a6ec0fc551fb2"
+    "signature": "b590d1fbbc4d99a7eeb306c42928c7801f4c2ea1"
   },
   "compilationOptions": {},
   "targets": {
@@ -221,6 +221,17 @@
           "System.Runtime": "4.1.0"
         }
       },
+      "System.Net.Http.WinHttpHandler/4.4.0": {
+        "runtime": {
+          "lib/netstandard2.0/System.Net.Http.WinHttpHandler.dll": {}
+        },
+        "runtimeTargets": {
+          "runtimes/win/lib/netstandard2.0/System.Net.Http.WinHttpHandler.dll": {
+            "rid": "win",
+            "assetType": "runtime"
+          }
+        }
+      },
       "System.ObjectModel/4.0.12": {
         "dependencies": {
           "System.Collections": "4.0.11",
@@ -228,6 +239,23 @@
           "System.Resources.ResourceManager": "4.0.1",
           "System.Runtime": "4.1.0",
           "System.Threading": "4.0.11"
+        }
+      },
+      "System.Private.ServiceModel/4.4.2": {
+        "dependencies": {
+          "System.Net.Http.WinHttpHandler": "4.4.0",
+          "System.Reflection.DispatchProxy": "4.4.0",
+          "System.Security.Principal.Windows": "4.4.0"
+        },
+        "runtimeTargets": {
+          "runtimes/unix/lib/netstandard2.0/System.Private.ServiceModel.dll": {
+            "rid": "unix",
+            "assetType": "runtime"
+          },
+          "runtimes/win7/lib/netstandard2.0/System.Private.ServiceModel.dll": {
+            "rid": "win7",
+            "assetType": "runtime"
+          }
         }
       },
       "System.Reflection/4.1.0": {
@@ -238,6 +266,7 @@
           "System.Runtime": "4.1.0"
         }
       },
+      "System.Reflection.DispatchProxy/4.4.0": {},
       "System.Reflection.Emit/4.0.1": {
         "dependencies": {
           "System.IO": "4.1.0",
@@ -305,6 +334,27 @@
           "System.Runtime": "4.1.0"
         }
       },
+      "System.Security.Principal.Windows/4.4.0": {
+        "runtimeTargets": {
+          "runtime/unix/lib/_._": {
+            "rid": "unix",
+            "assetType": "runtime"
+          },
+          "runtime/win/lib/_._": {
+            "rid": "win",
+            "assetType": "runtime"
+          }
+        }
+      },
+      "System.ServiceModel.Primitives/4.4.2": {
+        "dependencies": {
+          "System.Private.ServiceModel": "4.4.2"
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.ServiceModel.Primitives.dll": {},
+          "lib/netstandard2.0/System.ServiceModel.dll": {}
+        }
+      },
       "System.Text.Encoding/4.0.11": {
         "dependencies": {
           "Microsoft.NETCore.Targets": "1.0.1",
@@ -327,7 +377,8 @@
         "dependencies": {
           "Microsoft.EntityFrameworkCore": "2.0.0",
           "Microsoft.EntityFrameworkCore.Relational": "2.0.0",
-          "My_Web_API_Entity": "1.0.0"
+          "My_Web_API_Entity": "1.0.0",
+          "System.ServiceModel.Primitives": "4.4.2"
         },
         "runtime": {
           "My_Web_API_EF.dll": {}
@@ -551,6 +602,13 @@
       "path": "system.linq.queryable/4.0.1",
       "hashPath": "system.linq.queryable.4.0.1.nupkg.sha512"
     },
+    "System.Net.Http.WinHttpHandler/4.4.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-ZmsFZIZ4PL2UfUlfj4KCzzAGGE2SF39ENIqtvfgu0bwMEAe3J3CqZr765E2W6eQQtNK08/8DpHcsA0sAKZdEtA==",
+      "path": "system.net.http.winhttphandler/4.4.0",
+      "hashPath": "system.net.http.winhttphandler.4.4.0.nupkg.sha512"
+    },
     "System.ObjectModel/4.0.12": {
       "type": "package",
       "serviceable": true,
@@ -558,12 +616,26 @@
       "path": "system.objectmodel/4.0.12",
       "hashPath": "system.objectmodel.4.0.12.nupkg.sha512"
     },
+    "System.Private.ServiceModel/4.4.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-7lPNLr5icowsX0NhKz3Aqsx64rr4qYQUYNCDMmkdeGE25qDWX0r9PucuIJkvBeffn+4qWCLnROw8Ehy60WtbhA==",
+      "path": "system.private.servicemodel/4.4.2",
+      "hashPath": "system.private.servicemodel.4.4.2.nupkg.sha512"
+    },
     "System.Reflection/4.1.0": {
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-JCKANJ0TI7kzoQzuwB/OoJANy1Lg338B6+JVacPl4TpUwi3cReg3nMLplMq2uqYfHFQpKIlHAUVAJlImZz/4ng==",
       "path": "system.reflection/4.1.0",
       "hashPath": "system.reflection.4.1.0.nupkg.sha512"
+    },
+    "System.Reflection.DispatchProxy/4.4.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-xK6JE0mpsBD+T0qu3V6dmVRa06PxAvIIM/zSjouqP7Sk6X+FQj+9XFRz9GmZk9aJGMU1LX6AgTZIlsYZ64QKsw==",
+      "path": "system.reflection.dispatchproxy/4.4.0",
+      "hashPath": "system.reflection.dispatchproxy.4.4.0.nupkg.sha512"
     },
     "System.Reflection.Emit/4.0.1": {
       "type": "package",
@@ -634,6 +706,20 @@
       "sha512": "sha512-CUOHjTT/vgP0qGW22U4/hDlOqXmcPq5YicBaXdUR2UiUoLwBT+olO6we4DVbq57jeX5uXH2uerVZhf0qGj+sVQ==",
       "path": "system.runtime.extensions/4.1.0",
       "hashPath": "system.runtime.extensions.4.1.0.nupkg.sha512"
+    },
+    "System.Security.Principal.Windows/4.4.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-pP+AOzt1o3jESOuLmf52YQTF7H3Ng9hTnrOESQiqsnl2IbBh1HInsAMHYtoh75iUYV0OIkHmjvveraYB6zM97w==",
+      "path": "system.security.principal.windows/4.4.0",
+      "hashPath": "system.security.principal.windows.4.4.0.nupkg.sha512"
+    },
+    "System.ServiceModel.Primitives/4.4.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-7uqj9lhPWuud2VmY03KTQQrcg2VEHZqoyGdlQUGlHkBu5lWA3gbg6MRAMh81430ssx4TSd5+UlP5nw0/PSfcqw==",
+      "path": "system.servicemodel.primitives/4.4.2",
+      "hashPath": "system.servicemodel.primitives.4.4.2.nupkg.sha512"
     },
     "System.Text.Encoding/4.0.11": {
       "type": "package",

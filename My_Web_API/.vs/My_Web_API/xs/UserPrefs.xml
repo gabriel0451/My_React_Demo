@@ -1,42 +1,29 @@
 ﻿<Properties StartupConfiguration="{A3FAF5A0-102B-4140-824F-C4F9DE899EFE}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="My_Web_API/Controllers/PageController.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="My_Web_API/Infrustures/MyTokenValidate.cs">
     <Files>
-      <File FileName="My_Web_API/Controllers/PersonnelController.cs" Line="83" Column="1" />
-      <File FileName="My_Web_API/Startup.cs" Line="57" Column="1" />
-      <File FileName="My_Web_API/Infrustures/MyTokenValidate.cs" Line="25" Column="1" />
-      <File FileName="My_Web_API/Infrustures/CustomExceptionFilterAttribute.cs" Line="19" Column="1" />
-      <File FileName="My_Web_API_EF/DomainContext.cs" Line="13" Column="1" />
-      <File FileName="My_Web_API/autofac.json" Line="4" Column="37" />
-      <File FileName="My_Web_API/Program.cs" Line="17" Column="1" />
-      <File FileName="My_Web_API/Controllers/PageController.cs" Line="30" Column="1" />
+      <File FileName="My_Web_API/Controllers/PersonnelController.cs" Line="77" Column="127" />
+      <File FileName="My_Web_API_Entity/Role.cs" Line="23" Column="3" />
+      <File FileName="My_Web_API_Entity/QueryEntity/PersonnelQuery.cs" Line="42" Column="1" />
+      <File FileName="My_Web_API_Entity/Personnel.cs" Line="45" Column="1" />
+      <File FileName="My_Web_API_Repository/RoleRepository.cs" Line="20" Column="71" />
+      <File FileName="My_Web_API_Repository/PageRepository.cs" Line="15" Column="1" />
+      <File FileName="My_Web_API_Repository/PersonnelRepository.cs" Line="22" Column="40" />
+      <File FileName="My_Web_API_Repository_Contract/IRoleRepository.cs" Line="15" Column="1" />
+      <File FileName="My_Web_API_Repository_Contract/IPageRepository.cs" Line="1" Column="1" />
+      <File FileName="My_Web_API_Repository_Contract/IPersonnelRepository.cs" Line="15" Column="1" />
+      <File FileName="My_Web_API_Entity/QueryEntity/RoleQuery.cs" Line="15" Column="3" />
+      <File FileName="My_Web_API_EF/DomainContext.cs" Line="22" Column="2" />
+      <File FileName="My_Web_API_EF/Repository.cs" Line="18" Column="27" />
+      <File FileName="My_Web_API_Service_Contract/IRoleService.cs" Line="12" Column="60" />
+      <File FileName="My_Web_API_Service_Contract/IPersonnelService.cs" Line="24" Column="2" />
+      <File FileName="My_Web_API_Service/RoleService.cs" Line="18" Column="4" />
+      <File FileName="My_Web_API_Service/PersonnelService.cs" Line="27" Column="3" />
+      <File FileName="My_Web_API_Repository/RepositoryModule.cs" Line="1" Column="1" />
+      <File FileName="My_Web_API/Controllers/PageController.cs" Line="1" Column="1" />
+      <File FileName="My_Web_API/Controllers/RoleController.cs" Line="44" Column="42" />
+      <File FileName="My_Web_API/Startup.cs" Line="1" Column="1" />
+      <File FileName="My_Web_API/Infrustures/MyTokenValidate.cs" Line="1" Column="1" />
     </Files>
-    <Pads>
-      <Pad Id="ProjectPad">
-        <State name="__root__">
-          <Node name="My_Web_API" expanded="True">
-            <Node name="My_Web_API" expanded="True">
-              <Node name="Dependencies" expanded="True">
-                <Node name="PackageDependencies" expanded="True" />
-              </Node>
-              <Node name="Controllers" expanded="True">
-                <Node name="PageController.cs" selected="True" />
-              </Node>
-              <Node name="Infrustures" expanded="True" />
-              <Node name="Model" expanded="True" />
-            </Node>
-            <Node name="My_Web_API_EF" expanded="True" />
-            <Node name="My_Web_API_Entity" expanded="True" />
-            <Node name="My_Web_API_Repository" expanded="True" />
-            <Node name="My_Web_API_Service" expanded="True">
-              <Node name="Dependencies" expanded="True" />
-            </Node>
-            <Node name="My_Web_API_Service_Contract" expanded="True">
-              <Node name="Dependencies" expanded="True" />
-            </Node>
-          </Node>
-        </State>
-      </Pad>
-    </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.ItemProperties.My__Web__API PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
